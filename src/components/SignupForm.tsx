@@ -46,7 +46,7 @@ const SignupForm = () => {
     console.log('🚀 ~ file: SignupForm.tsx:15 ~ SignupForm ~ formik:', formik);
     return (
         <form
-            className="border-2 border-blue-400 p-2"
+            className="mx-auto w-2/5 border-blue-400 p-2"
             onSubmit={formik.handleSubmit}
         >
             <label htmlFor="firstname" className="font-medium text-gray-900">
@@ -59,10 +59,10 @@ const SignupForm = () => {
                 value={formik.values.firstname}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg text-sm p-2.5 block w-3/5 focus:outline-blue-500 focus:ring-blue-500 "
+                className="block w-3/5 rounded-lg border-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:outline-blue-500 focus:ring-blue-500 "
             />
             {formik.touched.firstname && formik.errors?.firstname && (
-                <p className="text-sm text-red-500 mt-2">
+                <p className="mt-2 text-sm text-red-500">
                     {formik.errors.firstname}
                 </p>
             )}
@@ -75,10 +75,10 @@ const SignupForm = () => {
                 value={formik.values.lastname}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg text-sm p-2.5 block w-3/5 focus:outline-blue-500 focus:ring-blue-500 "
+                className="block w-3/5 rounded-lg border-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:outline-blue-500 focus:ring-blue-500 "
             />
             {formik.touched.lastname && formik.errors?.lastname && (
-                <p className="text-sm text-red-500 mt-2">
+                <p className="mt-2 text-sm text-red-500">
                     {formik.errors.lastname}
                 </p>
             )}
@@ -91,14 +91,14 @@ const SignupForm = () => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg text-sm p-2.5 block w-3/5 focus:outline-blue-500 focus:ring-blue-500 "
+                className="block w-3/5 rounded-lg border-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:outline-blue-500 focus:ring-blue-500 "
             />
             {formik.touched.email && formik.errors?.email && (
-                <p className="text-sm text-red-500 mt-2">
+                <p className="mt-2 text-sm text-red-500">
                     {formik.errors.email}
                 </p>
             )}
-            <button className="bg-blue-500 text-xl mt-4 p-2 font-medium text-white rounded-lg">
+            <button className="mt-4 rounded-lg bg-blue-500 p-2 text-xl font-medium text-white">
                 submit
             </button>
         </form>
